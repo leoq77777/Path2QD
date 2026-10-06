@@ -12,7 +12,4 @@
 
 资料核对日期：2026-10-06。免费可读、开源代码、公开协议与仅配套代码开放分别标注；来源直接链接至原作者/官方/仓库。网页提供独立中文学习指引，不复制原始教材。社区资料不作为官方事实依据。实时 feed 和交易所接入可能收费；学习使用合成 fixtures。
 
-Interview Prep 新增 30 题 LeetCode 精选（6 个主题，官方直链、难度、顺序和 C++ 追问），见 dist/leetcode.js。题面免费可读不等于平台内容开源；部分题解/功能收费。
-
-## GitHub Pages
-发布 dist 目录中的静态网站。使用 gh-pages 分支根目录发布。更新后运行 git subtree push --prefix dist origin gh-pages。
+Interview Prep 研究版：63 题（36 P0 / 12 P1 / 15 P2）+ 6 个实现练习。题单数据见 dist/interview-data.js；原始面经、官方说明与证据等级直接显示在模块中。Blind75/NC150 交集来自 NeetCode 作者公开仓库；Grind75 按作者公开数据前75项、扩展池按其余项核对。Top150仅作为扩展来源，不猜测未提取的逐题归属。

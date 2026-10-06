@@ -11,3 +11,8 @@ function syncButton(){const all=[...document.querySelectorAll('.module')].every(
 document.getElementById('expand').addEventListener('click',()=>{const all=[...document.querySelectorAll('.module')].every(d=>d.open);document.querySelectorAll('.module').forEach(d=>d.open=!all);syncButton();});document.querySelectorAll('.module').forEach(d=>d.addEventListener('toggle',syncButton));
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelector(a.getAttribute('href')).open=true;}));
 const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('active',a.hash==='#'+entry.target.id));}},{rootMargin:'-10% 0px -65% 0px'});document.querySelectorAll('.module').forEach(d=>observer.observe(d));update();
+// Open a module when arriving through a direct roadmap link.
+if (/^#m(?:[1-9]|1[0-2])$/.test(location.hash)) {
+  const target = document.getElementById(location.hash.slice(1));
+  if (target) target.open = true;
+}
